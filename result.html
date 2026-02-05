@@ -1,0 +1,180 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+      <meta charset="utf-8">
+      <title>検索</title>
+      <meta name="description" content="Web Entertainment Design">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="icon" href="assetsimg/ロゴ４.png"><!--サイトロゴ-->
+      <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
+      <link rel="stylesheet" href="customcss/style.css">
+  </head>
+  <body>
+    <!--ナビゲーション-->
+    <header id="header">
+      <div class="inner wrapper">
+        <h1 class="logo">
+          <a href="./index.html"><img src="assetsimg/ロゴ4.png"></a>
+        </h1>
+        <nav>
+          <ul>
+            <li><a href="./login.html">ログイン</a></li>
+            <li><a href="./search.html">検索</a></li>
+            <li><a href="./about.html">デザイン</a></li>
+          </ul>
+        </nav>
+        <a href="./order.html"><img class="cart" src="onepoint/ic068.jpg"></a>
+      </div>
+    </header>
+
+
+  
+
+       
+    <h1 data-title="検索" class="page-title">検索</h1>
+
+    
+
+
+  <!-- 検索 -->
+
+
+     <div class="search-wrap">
+        <form action="#" method="get" role="search" aria-label="デザイン検索">
+          <input type="search" name="q" placeholder="キーワードで検索" required>
+          <button type="submit">検索</button>
+        </form>
+      </div>
+
+      
+<main class="product-list">
+            <article class="product-item ">
+                <div class="product-image">
+                  <button id="favoriteBtn" aria-pressed="false" class="star-btn">☆</button>
+                </div>
+                <div class="product-details">
+                    <div class="product-description">送料＋商品説明欄</div>
+                    <div class="product-footer">
+                        <span class="price">¥ ----</span>
+                        <a href="dezain.html"  class="design-button">デザイン配置へ</a>
+                    </div>
+                </div>
+            </article>
+
+
+
+
+
+            <article class="product-item ">
+                <div class="product-image">
+                  <button id="favoriteBtn2" aria-pressed="false" class="star-btn">☆</button>
+                </div>
+                <div class="product-details">
+                    <div class="product-description">送料＋商品説明欄</div>
+                    <div class="product-footer">
+                        <span class="price">¥ ----</span>
+                        <a href="dezain.html"  class="design-button">デザイン配置へ</a>
+                    </div>
+                </div>
+            </article>
+
+            <article class="product-item">
+                <div class="product-image">  
+                  <button id="favoriteBtn3" aria-pressed="false" class="star-btn">☆</button>
+                </div>
+                <div class="product-details">
+                    <div class="product-description">送料＋商品説明欄</div>
+                    <div class="product-footer">
+                        <span class="price">¥ ----</span>
+                        <a href="dezain.html" class="design-button">デザイン配置へ</a>
+                    </div>
+                </div>
+            </article>
+
+            <article class="product-item">
+                <div class="product-image product-image-star">
+                    <button id="favoriteBtn4" aria-pressed="false" class="star-btn">☆</button>
+                </div>
+                <div class="product-details">
+                    <div class="product-description">送料＋商品説明欄</div>
+                    <div class="product-footer">
+                        <span class="price">¥ ----</span>
+                     <a href="dezain.html" class="design-button">デザイン配置へ</a>
+                    </div>
+                </div>
+            </article>
+        </main>
+
+
+
+           <footer id="footer">
+            <a href="./contact.html" class="content" >お問い合わせ</a>
+        </footer>
+
+
+<style>
+  .star-btn {
+    font-size: 2rem;
+    color: gray;          /* 初期色 */
+    background: none;
+    border: none;
+    cursor: pointer;
+    margin-left: 5px;
+    margin-top: -2px;
+  }
+
+  .star-btn.active {
+    color: gold;          /* クリック後の色 */
+  }
+</style>
+
+
+   <script>
+  const btn = document.getElementById("favoriteBtn");
+  
+
+  btn.addEventListener("click", () => {
+    const isActive = btn.classList.toggle("active");
+
+    btn.setAttribute("aria-pressed", isActive); // アクセシビリティ対応
+    btn.textContent = isActive ? "★" : "☆";    // 見た目を切り替え
+
+  });
+
+const btn2 = document.getElementById("favoriteBtn2");
+  
+
+  btn2.addEventListener("click", () => {
+    const isActive = btn2.classList.toggle("active");
+
+    btn2.setAttribute("aria-pressed", isActive); // アクセシビリティ対応
+    btn2.textContent = isActive ? "★" : "☆";    // 見た目を切り替え
+
+  });
+
+  const btn3 = document.getElementById("favoriteBtn3");
+  
+
+  btn3.addEventListener("click", () => {
+    const isActive = btn3.classList.toggle("active");
+
+    btn3.setAttribute("aria-pressed", isActive); // アクセシビリティ対応
+    btn3.textContent = isActive ? "★" : "☆";    // 見た目を切り替え
+
+  });
+
+  const btn4 = document.getElementById("favoriteBtn4");
+  
+
+  btn4.addEventListener("click", () => {
+    const isActive = btn4.classList.toggle("active");
+
+    btn4.setAttribute("aria-pressed", isActive); // アクセシビリティ対応
+    btn4.textContent = isActive ? "★" : "☆";    // 見た目を切り替え
+
+  });
+
+ </script>
+
+    </body>
+</html>

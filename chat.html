@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>マイページ</title>
+        <meta name="description" content="Web Entertainment Design">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" href="assetsimg/ロゴ4.png"><!--サイトロゴ-->
+        <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
+        <link rel="stylesheet" href="customcss/style.css">
+      
+  </head>
+  <body>
+        <header id="header">
+            <div class="inner wrapper">
+                <h1 class="logo">
+                    <a href="./index.html"><img src="assetsimg/ロゴ4.png"></a>
+                </h1>
+                <nav>
+                    <ul>
+                         <li><a href="./login.html">ログイン</a></li>
+                        <li><a href="./search.html">検索</a></li>
+                        <li><a href="./about.html">デザイン</a></li>
+                    </ul>
+                </nav>
+                <a href="./order.html"><img class="cart" src="onepoint/ic068.jpg"></a>
+            </div>
+        </header>
+
+        <main class="main">
+    <h1 data-title="検索" class="page-title">チーム壱</h1>
+
+    <nav class="page1">
+      <a href="./myPage.html" class="link1"><img src="./onepoint/1053_cm_h.jpg" alt=""></a>
+    </nav>
+    
+
+    <section>
+
+      <div class="phot1"><img src="../assets/assetsimg/kkrn_icon_user_1-768x768.png" alt="アイコン"></div>
+      <div class="name3"><h3>神谷　陸</h3></div>
+
+<div class="vote"><p>いいと思ったデザインに投票してね</p></div>
+      <div class="category">
+        <div class="item7"><img src="uniform/アンラッキー.png" alt="かっこいい1"></div>
+        <div class="item7"><img src="uniform/ポロシャツ.png" alt="かっこいい2"></div>
+        <div class="item7"><img src="uniform/サッカーユニ.png" alt="かっこいい3"></div>
+        <div class="item7"><img src="uniform/images (9).jpg" alt="かっこいい4"></div>
+      </div>
+      <button id="likeButton1" aria-pressed="false">
+  👍 いいね <span id="likeCount1">0</span>
+</button>
+<button id="likeButton2" aria-pressed="false">
+  👍 いいね <span id="likeCount2">0</span>
+</button>
+<button id="likeButton3" aria-pressed="false">
+  👍 いいね <span id="likeCount3">0</span>
+</button>
+<button id="likeButton4" aria-pressed="false">
+  👍 いいね <span id="likeCount4">0</span>
+</button>
+    </section>
+
+    
+    <!--フッター-->
+    <footer id="footer">
+      <a href="./contact.html" class="content" >お問い合わせ</a>
+    </footer>
+<!-- <script>
+const likeButton = document.getElementById("likeButton1");
+const likeCount = document.getElementById("likeCount");
+
+let count = 0;
+
+likeButton.addEventListener("click", () => {
+  count++;
+  likeCount.textContent = count;
+  likeButton.setAttribute("aria-pressed", "true");
+});
+
+</script> -->
+
+<script>
+/**
+* このスクリプトは「いいね」ボタンの投票機能を実装するためのものです。
+* 主な目的：
+*  - ユーザーが複数の候補から1つに投票できるようにする
+*  - 同じボタンを再クリックすると投票を取り消せる
+*  - 別のボタンに投票し直すことができる
+*  - 投票状態に応じてボタンの有効/無効を切り替える
+*/
+
+let votedButton = null; // 現在投票しているボタンを管理（nullなら未投票）
+
+// 4つの「いいね」ボタンに対してイベントを設定
+for (let i = 1; i <= 4; i++) {
+const button = document.getElementById(`likeButton${i}`); // 対象ボタン
+const countSpan = document.getElementById(`likeCount${i}`); // 投票数表示用
+let count = 0; // このボタンの投票数（ローカル管理）
+
+// ボタンがクリックされたときの処理
+button.addEventListener('click', () => {
+// ① 同じボタンを再クリック → 投票取り消し
+if (votedButton === button) {
+count--;
+countSpan.textContent = count;
+button.setAttribute('aria-pressed', 'false'); // アクセシビリティ対応
+votedButton = null; // 投票解除
+enableAllButtons(); // 全ボタンを再び有効化
+return;
+}
+
+// ② 別のボタンに投票し直す場合 → 前のボタンを有効化＆状態リセット
+if (votedButton) {
+votedButton.disabled = false;
+votedButton.setAttribute('aria-pressed', 'false');
+}
+
+// ③ 新しいボタンに投票
+count++;
+countSpan.textContent = count;
+button.setAttribute('aria-pressed', 'true');
+votedButton = button;
+
+// 他のボタンを無効化（1つだけ選択状態にする）
+disableOtherButtons(button);
+});
+}
+
+// 他のボタンを無効化する関数
+function disableOtherButtons(activeButton) {
+for (let i = 1; i <= 4; i++) {
+const btn = document.getElementById(`likeButton${i}`);
+if (btn !== activeButton) {
+btn.disabled = true;
+}
+}
+}
+
+// 全ボタンを有効化する関数（投票解除時に使用）
+function enableAllButtons() {
+for (let i = 1; i <= 4; i++) {
+document.getElementById(`likeButton${i}`).disabled = false;
+}
+}
+</script>
+  </body>
+</html>

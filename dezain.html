@@ -1,0 +1,591 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <title>デザイン配置</title>
+    <meta name="description" content="Web Entertainment Design">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="assetsimg/ロゴ4.png">
+    <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
+    <link rel="stylesheet" href="customcss/style.css">
+  </head>
+  <body>
+    <!-- ナビゲーション -->
+    <header id="header">
+      <div class="inner wrapper">
+        <h1 class="logo"><img src="assetsimg/ロゴ4.png"></h1>
+        <nav>
+          <ul>
+            <li>ログイン</li>
+            <li><a href="./search.html">検索</a></li>
+            <li><a href="./about.html">デザイン</a></li>
+          </ul>
+        </nav>
+        <img class="cart" src="onepoint/ic068.jpg">
+      </div>
+    </header>
+    <!-- メイン -->
+    <main>
+      <div class="design-container">
+        <!-- ロゴ配置 -->
+        <h4 class="texth">ロゴ配置</h4>
+        <div class="card">
+          <div class="slider">
+            <!-- スライド -->
+            <div class="slides">
+              <div class="slides-1"><img src="./assetsimg/配置3.png" class="slide1"></div>
+              <div class="slides-1"><img src="./assetsimg/配置2.png" class="slide1"></div>
+              <div class="slides-1"><img src="./assetsimg/配置1.png" class="slide1"></div>
+              <div class="slides-1"><img src="./assetsimg/配置4.png" class="slide1"></div>
+            </div>
+            <!-- 矢印 -->
+            <div class="arrow prev">◀</div>
+            <div class="arrow next">▶</div>
+            <!-- 下の丸 -->
+            <div class="dots">
+              <div class="dot active" data-index="0"></div>
+              <div class="dot" data-index="1"></div>
+              <div class="dot" data-index="2"></div>
+              <div class="dot" data-index="3"></div>
+            </div>
+          </div>
+          <div class="slider-footer">
+            <button class="confirm"><a href="#p1">確定</a></button>
+          </div>
+        </div>
+        <!-- テキスト入力 -->
+        <h4 id="p1">テキスト入力</h4>
+        <div class="panel">
+          <div class="row">
+            <div class="label">テキスト入力</div>
+            <input type="text" value="SAMPLE TEXT">
+            <button class="small-btn">確定</button>
+          </div>
+          <div class="row">
+            <div class="label">フォント選択</div>
+            <select><option>Arial</option><option selected>Roboto</option><option>Times New Roman</option></select>
+          </div>
+          <div class="row">
+            <div class="label">フォントサイズ</div>
+            <select><option>12</option><option selected>14</option><option>16</option></select>
+          </div>
+        </div>
+        <!-- テキスト配置 -->
+        <h4>テキスト配置</h4>
+          <div class="card">
+            <div class="slider">
+            <!-- スライド -->
+            <div class="slides">
+              <div class="slides-1"><img src="./assetsimg/テキスト1.png" class="slide1"></div>
+              <div class="slides-1"><img src="./assetsimg/テキスト2.png" class="slide1"></div>
+              <div class="slides-1"><img src="./assetsimg/テキスト3.png" class="slide1"></div>
+              <div class="slides-1"><img src="./assetsimg/テキスト4.png" class="slide1"></div>
+            </div>
+            <!-- 矢印 -->
+            <div class="arrow prev">◀</div>
+            <div class="arrow next">▶</div>
+            <!-- 下の丸 -->
+            <div class="dots">
+              <div class="dot active" data-index="0"></div>
+              <div class="dot" data-index="1"></div>
+              <div class="dot" data-index="2"></div>
+              <div class="dot" data-index="3"></div>
+            </div>
+          </div>
+            <div class="slider-footer">
+              <button class="confirm"><a href="#p2">確定</a></button>
+            </div>
+          </div>
+        <!-- 生地の種類・シャツの種類 -->
+        <div class="fabric-section">
+          <div class="fabric-column">
+            <h4 class="texth">生地の種類</h4>
+            <div class="fabric-ul">
+              <ul>
+                <li>ポリエステル</li>
+                <li>ポリウレタン</li>
+                <li>ウール</li>
+                <li>ナイロン</li>
+              </ul>
+              <div class="fabric-label">
+                <label><input type="radio" name="fabric" checked></label>
+                <label><input type="radio" name="fabric"></label>
+                <label><input type="radio" name="fabric"></label>
+                <label><input type="radio" name="fabric"></label>
+              </div>
+            </div>
+          </div>
+          <div class="fabric-column">
+            <h4 class="texth" id="p2">シャツの種類</h4>
+            <div class="fabric-ul">
+              <ul>
+                <li>半袖</li>
+                <li>長袖</li>
+                <li>ノースリーブ</li>
+              </ul>
+              <div class="fabric-label">
+                <label><input type="radio" name="shirt" checked></label>
+                <label><input type="radio" name="shirt"></label>
+                <label><input type="radio" name="shirt"></label>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="fabric-note">
+           ※ポリエステルは速乾性が高く、軽量かつ耐久性に優れます。
+          <br>※ポリウレタンは伸縮性が高く快適な着心地。
+          <br>※ウールは保温性があり、ナイロンは強度が高く耐摩耗性に優れます。
+        </div>
+
+        <!-- デザイン確認（修正済み） -->
+        <h4>デザイン確認</h4>
+        <div class="design-check">
+          <div class="design-grid">
+            <div class="design-thumb">
+              <img src="assetsimg/テキスト1.png" alt="Tシャツプレビュー"style="width: 600px; height: 550px;">
+            </div>
+
+            <div class="design-details">
+              <div class="detail-row">
+                <div class="detail-key">カラー</div>
+                <div class="detail-val">  #132448</div>
+              </div>
+              <div class="detail-row">
+                <div class="detail-key">テキスト内容</div>
+                <div class="detail-val">  SAMPLE TEXT</div>
+              </div>
+              <div class="detail-row">
+                <div class="detail-key">生地</div>
+                <div class="detail-val">  ポリエステル</div>
+              </div>
+              <div class="detail-row">
+                <div class="detail-key">シャツの種類</div>
+                <div class="detail-val">  半袖</div>
+              </div>
+              <div class="detail-footer">
+                <button class="cart-btn"><a href="./order.html">カートに追加</a></button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <style>
+      /* ===== 全体設定 ===== */
+      html {
+        scroll-behavior: smooth;
+      }
+      body {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        font-family: "Segoe UI", "Noto Sans JP", sans-serif;
+        background-image: url(./onepoint/背景.jpeg);
+        background-attachment: fixed;
+        background-size: cover;
+        color: #333;
+      }
+
+      header {
+        background: #fff;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        padding: 10px 0;
+      }
+
+      main {
+        min-height: calc(100vh - 140px);
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        padding: 40px 10px;
+        margin-bottom: 100px;
+        box-sizing: border-box;
+      }
+
+      footer {
+        background: #fff;
+        text-align: center;
+        padding: 15px;
+        border-top: 1px solid #ddd;
+      }
+
+      /* ===== メインコンテナ ===== */
+      .design-container {
+        background: #fff;/*
+        border: 1px solid #ddd;*/
+        border-radius: 10px;
+        padding: 10px 40px 50px 40px;
+        max-width: 1050px;
+        width: 100%;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+      }
+
+      h4 {
+        font-size: 20px;
+        margin: 70px 0 10px;
+        text-align: left;
+      }
+
+      .texth {
+        margin-top: 30px;
+      }
+
+      .card, .panel {
+        border: 1.5px solid #cfcfcf;
+        border-radius: 8px;
+        background: #fff;
+        padding: 30px;
+        margin-bottom: 20px;
+      }
+      .slider {
+        margin: 20px auto;
+      }
+      .slides {
+        display: flex;
+        width: 400%; /* 4枚 */
+        transition: transform 0.5s ease;
+      }
+      .slides-1 {
+        width: 100%;
+        height: 100%;
+        flex-shrink: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .slides-1 img {
+        width: 70%;
+        height: auto;
+        object-fit: contain;
+      }
+
+      /* 矢印 */
+      .arrow {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        font-size: 32px;
+        color: white;
+        cursor: pointer;
+        user-select: none;
+        padding: 10px;
+      }
+      .prev { left: 0; }
+      .next { right: 0; }
+
+      /* 下の丸 */
+      .dots {
+        position: absolute;
+        bottom: 10px;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+       gap: 12px;
+      }
+      .dot {
+        width: 14px;
+        height: 14px;
+        border-radius: 50%;
+        background: #ddd;
+        cursor: pointer;
+      }
+      .dot.active {
+        background: #555;
+      }
+
+      /* ===== スライダー・プレビュー ===== */
+      .slider, .preview {
+        width: 100%;
+        height: 500px;
+        border: 1px solid #fff;
+        border-radius: 8px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .arrow {
+        width: 50px;
+        height: 80px;
+        font-size: 27px;
+        background: #666;
+        /*border: 1px solid #ccc;*/
+        border-radius: 6px;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #fff;
+        cursor: pointer;
+      }
+
+      .arrow.left { left: 10px; }
+      .arrow.right { right: 10px; }
+
+      .slider-footer {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        margin-top: 10px;
+      }
+
+      .dots {
+        display: flex;
+        gap: 10px;
+        margin-top: 50px;
+      }
+
+      .dot {
+        width: 8px;
+        height: 8px;
+        background: #d7d7d7;
+        border-radius: 50%;
+      }
+
+      .dot.active { background: #333; }
+
+      .confirm {
+        background: #1d72f3;
+        color: #fff;
+        border: none;
+        border-radius: 4px;
+        padding: 8px 20px;
+        font-size: 15px;
+        cursor: pointer;
+      }
+      .confirm a {
+        color: #fff;
+      }
+
+      .confirm:hover {
+        background: #E9C33D;
+      }
+
+      #p1 {
+        scroll-margin-top: 120px;
+      }
+      #p2 {
+        scroll-margin-top: 110px;
+      }
+
+      /* ===== 入力パネル ===== */
+      .row {
+        display: flex;
+        align-items: center;
+        margin-bottom: 15px;
+        flex-wrap: wrap;
+      }
+
+      .label {
+        width: 120px;
+        font-size: 14px;
+      }
+
+      input[type="text"], select {
+        flex: 1;
+        padding: 8px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        font-size: 14px;
+      }
+
+      .small-btn {
+        margin-left: 8px;
+        padding: 7px 10px;
+        font-size: 13px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        background: #eee;
+        cursor: pointer;
+      }
+
+      .small-btn:hover {
+        background: #ddd;
+      }
+
+      /* ===== Tシャツ選択UI ===== */
+      .fabric-section {
+        display: flex;
+        justify-content: space-between;
+        gap: 40px;
+        margin-top: 20px;
+        margin-left: 50px;
+        flex-wrap: wrap;
+      }
+
+      .fabric-column {
+        flex: 1;
+      }
+
+      .fabric-column ul {
+        list-style: none;
+        line-height: 35px;
+      }
+      .fabric-ul {
+        display: flex;
+      }
+
+      .fabric-column label {
+        display: block;
+        margin-left: 40px;
+      }
+
+      .fabric-note {
+        margin-top: 15px;
+        font-size: 12px;
+        margin-bottom: 40px;
+        color: #555;
+        border: 1px solid #ddd;
+        padding: 10px 30px;
+        background: #fafafa;
+        border-radius: 6px;
+      }
+
+      /* ===== デザイン確認（新仕様） ===== */
+      .design-check {
+        padding: 20px 40px;
+        border: 1.5px solid #e0e0e0;
+        border-radius: 8px;
+        background: #fff;
+      }
+
+      .design-grid {
+        display: flex;
+        gap: 24px;
+        align-items: flex-start;
+        justify-content: space-between;
+        flex-wrap: wrap;
+      }
+
+      .design-thumb {
+        flex: 0 1 520px;
+        max-width: 60%;
+        min-width: 300px;
+        border: 3px solid #666;
+        border-radius: 6px;
+        background: #fff;
+        height: 400px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .design-thumb img {
+        max-width: 92%;
+        max-height: 92%;
+        object-fit: contain;
+      }
+
+      .design-details {
+        flex: 0 1 340px;
+        max-width: 340px;
+        min-width: 240px;
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+      }
+
+      .detail-row {
+        display: flex;
+        /*gap: 10px;*/
+        align-items: stretch;
+      }
+
+      .detail-key {
+        background: #666;
+        color: #fff;
+        padding: 15px 12px;
+        min-width: 120px;
+        border-radius: 4px 0 0 4px;
+        font-size: 13px;
+        display: flex;
+        align-items: center;
+      }
+
+      .detail-val {
+        background: #f3f3f3;
+        padding: 10px 12px 10px 18px;
+        border-radius: 0 4px 4px 0;
+        flex: 1;
+        font-size: 14px;
+        color: #111;
+        display: flex;
+        align-items: center;
+      }
+
+      .detail-footer {
+        display: flex;
+        justify-content: flex-end;
+        margin-top: 15px;
+      }
+
+      .cart-btn {
+        background: #1d72f3;
+        color: #fff;
+        border: none;
+        padding: 10px 18px;
+        border-radius: 6px;
+        cursor: pointer;
+        font-size: 14px;
+      }
+      .cart-btn a {
+        color: #fff;
+      }
+      .cart-btn:hover { background:#E9C33D; }
+
+      /* ===== スマホ対応 ===== */
+      @media (max-width: 820px) {
+        .design-grid { flex-direction: column; align-items: center; }
+        .design-thumb { width: 92%; min-width: auto; max-width: none; height: 320px; }
+        .design-details { width: 92%; max-width: none; min-width: auto; }
+        .detail-row { flex-direction: column; align-items: stretch; }
+        .detail-key { min-width: auto; width: 34%; padding: 8px; }
+        .detail-val { width: 100%; padding: 8px; }
+        .detail-key, .detail-val { font-size: 13px; }
+      }
+    </style>
+    <script>
+      document.querySelectorAll(".slider").forEach((slider) => {
+
+  const slides = slider.querySelector(".slides");
+  const dots = slider.querySelectorAll(".dot");
+  const prev = slider.querySelector(".prev");
+  const next = slider.querySelector(".next");
+
+  let current = 0;
+  const total = dots.length;
+
+  function updateSlide(idx) {
+    slides.style.transform = `translateX(-${idx * 100}%)`;
+    dots.forEach(d => d.classList.remove("active"));
+    dots[idx].classList.add("active");
+  }
+
+  prev.addEventListener("click", () => {
+    current = (current - 1 + total) % total;
+    updateSlide(current);
+  });
+
+  next.addEventListener("click", () => {
+    current = (current + 1) % total;
+    updateSlide(current);
+  });
+
+  dots.forEach(dot => {
+    dot.addEventListener("click", () => {
+      current = Number(dot.dataset.index);
+      updateSlide(current);
+    });
+  });
+
+});
+    </script>
+    </main>
+
+    <footer id="footer">
+      <a class="content">お問い合わせ</a>
+    </footer>
+  </body>
+</html>

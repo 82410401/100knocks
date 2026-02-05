@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>美容セルフチェック診断</title>
+<style>
+body {
+font-family: 'Arial', sans-serif;
+background-color: #f4f4f4;
+color: #333;
+margin: 0;
+padding: 20px;
+text-align: center;
+}
+.screen {
+background-color: #fff;
+padding: 20px;
+border-radius: 8px;
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+max-width: 400px;
+margin: 0 auto 20px;
+text-align: left;
+}
+h1, h2 {
+text-align: center;
+color: #5cb85c;
+}
+button {
+width: 100%;
+padding: 10px;
+margin: 8px 0;
+border: none;
+border-radius: 5px;
+background-color: #5cb85c;
+color: white;
+font-size: 16px;
+cursor: pointer;
+transition: background-color 0.3s;
+}
+button:hover {
+background-color: #4cae4c;
+}
+.category-button {
+font-size: 18px;
+font-weight: bold;
+}
+.question-item {
+margin-bottom: 20px;
+border-bottom: 1px solid #eee;
+padding-bottom: 15px;
+}
+.choice-label {
+display: block;
+padding: 8px;
+margin: 4px 0;
+border: 1px solid #ddd;
+border-radius: 4px;
+cursor: pointer;
+transition: background-color 0.2s;
+}
+.choice-label:hover {
+background-color: #e6ffe6;
+}
+.choice-label input[type="radio"] {
+margin-right: 10px;
+}
+.result-advice {
+background-color: #e6ffe6;
+padding: 15px;
+border-left: 5px solid #5cb85c;
+margin-top: 15px;
+}
+.hidden {
+display: none;
+}
+</style>
+<script>
+  window.addEventListener('DOMContentLoaded', () => {
+
+
+    const startBtn = document.getElementById('start-button');
+    const topScreen = document.getElementById('top-screen');
+    const categoryScreen = document.getElementById('category-screen');
+
+    startBtn.addEventListener('click', () => {
+      // トップを隠してカテゴリー画面を表示
+      topScreen.classList.add('hidden');
+      categoryScreen.classList.remove('hidden');
+      // 画面先頭へ（任意）
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  
+  
+     const backTop = document.getElementById('back_top');
+  
+      backTop.addEventListener('click', () => {
+      // トップを隠してカテゴリー画面を表示
+      topScreen.classList.remove('hidden');
+      categoryScreen.classList.add('hidden');
+    });
+  
+  
+  });
+</script>
+</head>
+<body>
+<div id="top-screen" class="screen">
+<h1>美容セルフチェック診断</h1>
+<p style="text-align: center;">あなたの状態をチェックし、最適なアドバイスを受けましょう。</p>
+<button id="start-button">診断を始める</button>
+</div>
+
+<div id="category-screen" class="screen hidden">
+<h2 id="screen-title">カテゴリー選択</h2>
+<div id="category-buttons">
+<button class="category-button">肌 🧖‍♀️</button>
+<button class="category-button">髪 💇‍♀️</button>
+<button class="category-button">ボディ</button>
+<button class="category-button">ネイル</button>
+<button id="back_top" style="background-color: #aaa;">トップへ戻る</button>
+</div>
+
+<div id="question-area" class="hidden">
+<button id="result-button" style="margin-top: 20px;" disabled>診断結果を見る</button>
+<button style="background-color: #aaa;">カテゴリーに戻る</button>
+</div>
+
+<div id="result-area" class="hidden">
+<h2 id="result-category-title">診断結果</h2>
+<div id="advice-content" class="result-advice"></div>
+<button style="margin-top: 20px;">他のカテゴリーを診断する</button>
+</div>
+</div>
+</body>
+</html>
